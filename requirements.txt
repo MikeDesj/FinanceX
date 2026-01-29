@@ -1,0 +1,35 @@
+# Financial Fortress - Python Dependencies
+# PowerX Algorithmic Trading System
+# Python 3.12+
+
+# Core Data Processing
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Market Data Providers
+yfinance>=0.2.35
+
+# Technical Analysis (choose one based on preference)
+pandas-ta>=0.3.14b
+# TA-Lib>=0.4.28  # Requires system-level installation
+
+# CLI & Logging
+click>=8.1.0
+rich>=13.7.0
+
+# Configuration
+pyyaml>=6.0.1
+pydantic>=2.5.0  # Config validation
+pyarrow>=15.0.0  # Parquet file support for caching
+
+# Persistence
+# sqlite3 is built-in
+
+# Testing
+pytest>=8.0.0
+pytest-cov>=4.1.0
+
+# Development (optional)
+black>=24.0.0
+ruff>=0.2.0
+mypy>=1.8.0
