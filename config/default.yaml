@@ -1,0 +1,61 @@
+# Financial Fortress - Default Configuration
+# PowerX Optimizer-inspired trading system
+
+strategy:
+  name: "PowerX"
+
+  # Momentum indicators (PowerX signals)
+  indicators:
+    rsi:
+      period: 7
+      threshold: 50
+    stochastics:
+      k_period: 14
+      d_period: 3
+      smooth_k: 3
+      threshold: 50
+    macd:
+      fast: 12
+      slow: 26
+      signal: 9
+
+  # Wheel Strategy (options)
+  wheel:
+    min_annualized_roi: 30.0  # Minimum 30% annualized ROI
+    exit_profit_fast: 80     # Exit at 80% profit within 24hrs
+    exit_profit_normal: 90   # Exit at 90% profit before expiration
+
+risk_management:
+  stop_loss_percent: 2.0
+  profit_target_percent: 6.0
+  max_position_size: 1000
+  max_open_positions: 5
+
+data:
+  provider: "yfinance"
+  default_interval: "1d"
+  lookback_days: 60
+
+cache:
+  enabled: true
+  directory: "cache/"
+  ttl_minutes:
+    1d: 240    # 4 hours for daily data
+    1h: 30     # 30 min for hourly
+    5m: 5      # 5 min for 5-minute bars
+
+universe:
+  default: "custom"
+  custom_watchlist: "universe/watchlists/default.yaml"
+
+scanner:
+  max_concurrent: 10
+  batch_delay_ms: 100
+
+paper_trading:
+  initial_capital: 100000
+  commission_per_trade: 0.0
+
+logging:
+  level: "INFO"
+  file: "logs/trading.log"

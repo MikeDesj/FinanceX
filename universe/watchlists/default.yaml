@@ -1,0 +1,17 @@
+# Custom Watchlist - Financial Fortress
+# Add your tickers below
+
+name: "Default Watchlist"
+description: "Custom stock universe for scanning"
+
+tickers:
+  - AAPL
+  - MSFT
+  - GOOGL
+  - AMZN
+  - NVDA
+  - META
+  - TSLA
+  - JPM
+  - V
+  - UNH
